@@ -133,6 +133,36 @@
 				<!--A 3ª Lei de Kepler-->
 				<section data-background="#BF360C" data-background-transition="zoom">
 					<section data-background="#BF360C">A 3ª Lei de Kepler</section>
+					<section data-background="#BF360C">
+						<h3>1618: Harmonia dos Mundos</h3>
+						<p>Regresso à busca do Plano Divino para a Criação do Universo</p>
+						<blockquote>
+							&ldquo;os quadrados dos períodos de revolução de dois planetas quaisquer estão entre si como os cubos de suas distâncias médias ao Sol&ldquo;
+						</blockquote>
+						<span>${T^2 \over R^3} = k$</span>
+					</section>
+					<section data-background="#BF360C">
+						<span>${T^2 \over R^3} = k$</span>
+						<table>
+							<thead>
+								<tr>
+									<th>Planeta</th>
+									<th>Período de Revolução (T)</th>
+									<th>Raio da Órbita (R)</th>
+									<th>$k = {T^2 \over R^3}$</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Mercúrio</td>
+									<td>0,241 anos</td>
+									<td>0,387 u.a.</td>
+									<td>1,002</td>
+								</tr>								
+							</tbody>
+						</table>
+					</section>
+
 				</section>
 				
 				<!--Conclusão-->
@@ -150,11 +180,18 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				
+				math: {
+					mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+				},
+
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/math/math.js', async: true }
 				]
 				
 			});
